@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      color: #444;
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 40px auto;
+      max-width: 650px;
+      padding: 0 10px;
+    }
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+    }
+  </style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>kyle's notes</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1><a href="/linearalgebra/intro.html">linear algebra</a>:<em>linear transformations</em></h1>
+    </header>
+    <h2>intro</h2>
+    <h2>definition</h2>
+    <p>
+    A <strong>linear transformation</strong> is a <em>mapping</em> between vector
+    spaces.
+    <blockquote>
+      We represent <em>mapping</em> between two vector spaces with an arrow
+      indicating which way we are mapping. So if we map <em>from</em> `RR` <em>to</em>
+      `RR^2`, we indicate this by `RR rarr RR^2`. 
+    </blockquote>
+    Linear transformations must have the two following properties:
+    <br><br>
+    For a linear transformation `L: RR^n rarr RR^m`
+    <ol>
+      <a name="prop1">
+      <li>
+        For vectors `x,y in RR^n`
+        <center>`L(x + y) = L(x) + L(y)` </center>
+      </li>
+      </a>
+      <a name="prop2">
+      <li>
+        For a scalar `alpha in RR`
+        <center>`L(alpha x) = alpha L(x)`</center>
+      </li>
+      </a>
+    </ol>
+    </p>
+    <h2>some examples</h2>
+    <p>
+    If you're like me, definitions are great but you need to become familiar with
+    them in order to understand, so let's go through some examples of linear transformations.
+    <br><br>
+    <ol>
+      <li>
+        <h3>very simple</h3>
+         A very simple linear transformation between `RR^2` and
+        `RR^2` is <center>`L_1(x_1,x_2)=(x_1, x_2)`</center> All this transformation
+        does is take a vector from `RR^2` and maps it back to the exact same vector!
+        <br>
+        
+        I guess this example isn't much of a <em>transformation</em>, 
+        but we should ensure it meets the two definition properties:
+        <ol>
+          <li>
+            To ensure <a href="#prop1">property 1</a> holds for the map `L_1` we need two arbitrary vectors from `RR^2`. Let's call 
+            them `x=(x_1, x_2)` and `y=(y_1, y_2)`.
+            <br>
+            $$\begin{align}
+              L_1(x+y)&=L_1(x_1+y_1, x_2+y_2)\\
+                      &=(x_1+y_1, x_2+y_2)
+            \end{align}$$
+            and
+            $$\begin{align}
+              L_1(x) + L_1(y)&=L_1(x_1, x_2) + L_1(y_1, y_2)\\
+                             &=(x_1, x_2)+(y_1,y_2)\\
+                             &=(x_1+y_1, x_2+y_2)
+            \end{align}$$
+            And here we see that `L_1(x+y)=L_1(x)+L_1(y)` and so
+            <a href="#prop1">property 1</a> does hold.
+          </li>
+          <li>
+            To check <a href="#prop2">property 2</a> we have to use an arbitrary
+            scalar, let's call it `alpha in RR` and an arbitrary vector from `RR^2`, let's
+            call it `x=(x_1, x_2)`.
+    
+            $$\begin{align}
+              L_1(\alpha x) &=L_1(\alpha x_1, \alpha x_2)\\
+                            &=(\alpha x_1, \alpha x_2)\\
+            \end{align}$$
+            and
+            $$\begin{align}
+              \alpha L_1(x) &=\alpha L_1(x_1, x_2)\\
+                            &=\alpha (x_1, x_2)\\
+                            &=(\alpha x_1, \alpha x_2)\\
+            \end{align}$$
+            So we see that <a href="#prop2">property 2</a> is satisfied as 
+            `L_1(alpha x) = alpha L_1(x)`.
+          <br><br>
+          So while the linear transformation we defined doesn't really transform anything
+          it certainly is a linear transformation.
+          </li>
+        </ol>
+        <br>
+        Whew, I know I called this example 'very simple' but we did cover quite a
+        bit. We saw our first linear transformation and proved that it was in fact
+        a linear transformation.
+        
+        This kind of mapping is called the <strong>identity transformation of `RR^2.`</strong>
+      </li>
+    </ol>
+    <br><br>
+    Now let's try to actually <em>transform</em> a given vector to something that
+    isn't the exact same thing using linear transformations.
+    </p>
+    <h2>matrix representation</h2>
+    <p>
+    You, like me might be wondering how we can represent linear transformations.
+    </p>
+  </body>
+</html>
